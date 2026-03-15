@@ -83,7 +83,7 @@ This command is designed to run automatically after content generation:
 
 ### Automatic Execution
 After `/write` or `/rewrite` commands save article files, the scrubber should run automatically on:
-- Main article file in `drafts/` directory
+- Main article file in `seo/drafts/` directory
 - Any generated content that will be published
 
 ### Manual Execution
@@ -97,7 +97,7 @@ You can also manually scrub any markdown file:
 
 ### Implementation
 The scrubbing functionality is implemented in:
-- **Module**: `data_sources/modules/content_scrubber.py`
+- **Module**: `seo/data_sources/modules/content_scrubber.py`
 - **Main Function**: `scrub_file(file_path, output_path, verbose)`
 - **Class**: `ContentScrubber` with specialized methods for each cleaning operation
 
@@ -119,7 +119,7 @@ The scrubbing process:
 
 ### Basic Scrubbing
 ```
-/scrub drafts/content-marketing-strategies-2025-10-31.md
+/scrub seo/drafts/content-marketing-strategies-2025-10-31.md
 ```
 
 ### What Gets Changed

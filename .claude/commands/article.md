@@ -68,7 +68,7 @@ This prevents the "AI knows everything" trap that produces generic content match
    - Outdated info to update with 2025 data
 
 ### Output
-Save to: `research/serp-analysis-[topic-slug]-[YYYY-MM-DD].md`
+Save to: `seo/research/serp-analysis-[topic-slug]-[YYYY-MM-DD].md`
 
 ```markdown
 # SERP Analysis: [Topic]
@@ -163,7 +163,7 @@ Based on what's ranking, these sections appear essential:
    | **Comments** | What viewers ask about |
 
 ### Output
-Save to: `research/social-research-[topic-slug]-[YYYY-MM-DD].md`
+Save to: `seo/research/social-research-[topic-slug]-[YYYY-MM-DD].md`
 
 ```markdown
 # Social Research: [Topic]
@@ -265,7 +265,7 @@ Save to: `research/social-research-[topic-slug]-[YYYY-MM-DD].md`
    - Featured snippet opportunities: FAQ, definitions
 
 ### Output
-Save to: `research/article-plan-[topic-slug]-[YYYY-MM-DD].md`
+Save to: `seo/research/article-plan-[topic-slug]-[YYYY-MM-DD].md`
 
 ```markdown
 # Article Plan: [Topic]
@@ -497,7 +497,7 @@ After all sections are written and edited:
    - [ ] Updates outdated info with 2025 data
 
 ### Output
-Save to: `drafts/[topic-slug]-[YYYY-MM-DD].md`
+Save to: `seo/drafts/[topic-slug]-[YYYY-MM-DD].md`
 
 ---
 
@@ -507,13 +507,13 @@ After saving the draft:
 
 ### 1. Scrub AI Patterns
 ```
-/scrub drafts/[filename].md
+/scrub seo/drafts/[filename].md
 ```
 Removes invisible Unicode watermarks and AI telltale patterns.
 
 ### 2. Score Content Quality
 ```bash
-python data_sources/modules/content_scorer.py drafts/[filename].md
+python seo/data_sources/modules/content_scorer.py seo/drafts/[filename].md
 ```
 
 **Score Threshold: 70+**
@@ -532,7 +532,7 @@ If score < 70:
 2. Apply top 3-5 fixes
 3. Re-score
 4. Repeat once more if needed
-5. If still < 70 after 2 iterations → move to `review-required/`
+5. If still < 70 after 2 iterations → move to `seo/review-required/`
 
 ### 4. Run Optimization Agents
 After passing quality threshold:
@@ -547,12 +547,12 @@ After passing quality threshold:
 ## Complete Output Structure
 
 ```
-research/
+seo/research/
 ├── serp-analysis-[topic]-[date].md         # SERP research
 ├── social-research-[topic]-[date].md       # Reddit/YouTube insights
 └── article-plan-[topic]-[date].md          # Section-by-section plan
 
-drafts/
+seo/drafts/
 ├── [topic]-[date].md                       # Final article
 ├── content-analysis-[topic]-[date].md      # Content analyzer output
 ├── seo-report-[topic]-[date].md            # SEO optimizer output
@@ -566,12 +566,12 @@ drafts/
 ## Required Context Files
 
 Before writing, review these context files:
-- @context/brand-voice.md - your brand tone and messaging
-- @context/style-guide.md - Formatting rules
-- @context/seo-guidelines.md - SEO requirements
-- @context/internal-links-map.md - Linking targets
-- @context/features.md - your brand product information
-- @context/writing-examples.md - Style reference
+- seo/context/brand-voice.md - your brand tone and messaging
+- seo/context/style-guide.md - Formatting rules
+- seo/context/seo-guidelines.md - SEO requirements
+- seo/context/internal-links-map.md - Linking targets
+- seo/context/features.md - your brand product information
+- seo/context/writing-examples.md - Style reference
 
 ---
 

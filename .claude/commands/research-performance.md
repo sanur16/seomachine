@@ -33,7 +33,7 @@ This will:
 3. Enrich with GSC ranking data
 4. Calculate traffic trends (180-day comparison)
 5. Categorize into performance quadrants
-6. Generate report: `research/performance-matrix-YYYY-MM-DD.md`
+6. Generate report: `seo/research/performance-matrix-YYYY-MM-DD.md`
 
 ## Output
 

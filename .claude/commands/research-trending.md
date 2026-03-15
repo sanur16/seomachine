@@ -33,7 +33,7 @@ This will:
    - Search volume (30%)
    - Current position advantage (30%)
 6. Determine urgency level
-7. Generate report: `research/trending-YYYY-MM-DD.md`
+7. Generate report: `seo/research/trending-YYYY-MM-DD.md`
 
 ## Output
 

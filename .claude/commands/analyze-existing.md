@@ -103,11 +103,11 @@ If a rewrite is recommended, provide initial research brief including:
 
 ## File Management
 After completing the analysis, automatically save the report to:
-- **File Location**: `research/analysis-[post-slug]-[YYYY-MM-DD].md`
+- **File Location**: `seo/research/analysis-[post-slug]-[YYYY-MM-DD].md`
 - **File Format**: Markdown with scores, recommendations, and action items
 - **Naming Convention**: Use lowercase, hyphenated post slug and current date
 
-Example: `research/analysis-podcast-hosting-guide-2025-10-15.md`
+Example: `seo/research/analysis-podcast-hosting-guide-2025-10-15.md`
 
 ## Next Steps
 Based on the analysis, the system will suggest:

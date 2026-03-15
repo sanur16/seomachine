@@ -31,7 +31,7 @@ Analyze article content and recommend specific internal links to Castos pages th
 - Flag opportunities for deeper exploration or next steps
 
 #### Reference Material Review
-- Check @context/internal-links-map.md for priority linking targets
+- Check seo/context/internal-links-map.md for priority linking targets
 - Identify which Castos pages align with article topics:
   - **Pillar content** (comprehensive guides on main topics)
   - **Related blog posts** (supporting content on subtopics)

@@ -34,7 +34,7 @@ This will:
 6. Analyze search intent
 7. Assess competitive difficulty
 8. Generate content brief
-9. Create report: `research/serp-analysis-[keyword].md`
+9. Create report: `seo/research/serp-analysis-[keyword].md`
 
 ## Output
 

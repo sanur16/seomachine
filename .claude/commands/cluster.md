@@ -16,13 +16,13 @@ Build a complete topic cluster strategy with pillar page definition, 8-12 suppor
 
 Check for existing research that informs this cluster:
 
-1. Search `research/` for any existing `/research-topics` output:
+1. Search `seo/research/` for any existing `/research-topics` output:
    ```
-   Glob: research/topic-clusters-*.md
+   Glob: seo/research/topic-clusters-*.md
    ```
 2. Search for any existing research on this topic:
    ```
-   Glob: research/*[topic-slug]*.md
+   Glob: seo/research/*[topic-slug]*.md
    ```
 3. If found, extract:
    - Authority score for this topic area
@@ -39,7 +39,7 @@ Build the complete keyword landscape for this topic.
 1. **DataForSEO Keyword Ideas**
    ```bash
    python3 -c "
-   import sys; sys.path.insert(0, 'data_sources/modules')
+   import sys; sys.path.insert(0, 'seo/data_sources/modules')
    from dataforseo import DataForSEOClient
    client = DataForSEOClient()
    results = client.get_keyword_ideas('$ARGUMENTS')
@@ -51,7 +51,7 @@ Build the complete keyword landscape for this topic.
 2. **DataForSEO Questions**
    ```bash
    python3 -c "
-   import sys; sys.path.insert(0, 'data_sources/modules')
+   import sys; sys.path.insert(0, 'seo/data_sources/modules')
    from dataforseo import DataForSEOClient
    client = DataForSEOClient()
    results = client.get_questions('$ARGUMENTS')
@@ -78,7 +78,7 @@ Analyze what's winning for the pillar keyword.
 1. **Get SERP Data**
    ```bash
    python3 -c "
-   import sys; sys.path.insert(0, 'data_sources/modules')
+   import sys; sys.path.insert(0, 'seo/data_sources/modules')
    from dataforseo import DataForSEOClient
    client = DataForSEOClient()
    results = client.get_serp_data('$ARGUMENTS')
@@ -163,7 +163,7 @@ For each supporting article, specify:
    - Ensure no orphaned pieces
 
 3. **Integration with Existing Content**
-   - Review @context/internal-links-map.md
+   - Review seo/context/internal-links-map.md
    - Identify existing site pages that should link to/from cluster pieces
    - Note specific anchor text recommendations
 
@@ -207,7 +207,7 @@ For each piece, provide the exact command:
 
 ## Output
 
-Save to: `research/cluster-strategy-[topic-slug]-[YYYY-MM-DD].md`
+Save to: `seo/research/cluster-strategy-[topic-slug]-[YYYY-MM-DD].md`
 
 ### Output Template
 
@@ -356,6 +356,6 @@ Save to: `research/cluster-strategy-[topic-slug]-[YYYY-MM-DD].md`
 ## Required Context Files
 
 Before building the cluster strategy, review:
-- @context/seo-guidelines.md - SEO requirements and keyword rules
-- @context/internal-links-map.md - Existing internal linking targets
-- @context/target-keywords.md - Current keyword targets (avoid overlap)
+- seo/context/seo-guidelines.md - SEO requirements and keyword rules
+- seo/context/internal-links-map.md - Existing internal linking targets
+- seo/context/target-keywords.md - Current keyword targets (avoid overlap)

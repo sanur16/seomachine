@@ -361,7 +361,7 @@ Read the article and identify:
 2. **Maintain Accuracy**: No changes to facts, data, or technical details
 3. **Enhance Readability**: Make it easier to read, not harder
 4. **Add Personality**: Inject humanity without being unprofessional
-5. **Stay On Brand**: Maintain voice from `context/brand-voice.md`
+5. **Stay On Brand**: Maintain voice from `seo/context/brand-voice.md`
 6. **Be Specific**: Replace vague with concrete wherever possible
 7. **Respect Structure**: Keep H1/H2/H3 hierarchy intact
 

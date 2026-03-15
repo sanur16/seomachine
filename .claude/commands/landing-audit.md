@@ -7,7 +7,7 @@ Use this command to audit existing landing pages for conversion optimization opp
 
 **Examples:**
 - `/landing-audit https://yoursite.com/private-producting-solutions/`
-- `/landing-audit landing-pages/product-hosting-beginners-2025-12-11.md --goal trial`
+- `/landing-audit seo/landing-pages/product-hosting-beginners-2025-12-11.md --goal trial`
 - `/landing-audit https://yoursite.com/pricing/ --goal trial`
 
 **Defaults:**
@@ -24,14 +24,14 @@ Use this command to audit existing landing pages for conversion optimization opp
 ## Analysis Modules Used
 
 ### 1. Landing Page Scorer
-**Module**: `data_sources/modules/landing_page_scorer.py`
+**Module**: `seo/data_sources/modules/landing_page_scorer.py`
 - Overall score (0-100) against CRO best practices
 - Category scores: Above-fold, CTAs, Trust signals, Structure, SEO
 - Critical issues and warnings
 - Publishing readiness assessment
 
 ### 2. Above-the-Fold Analyzer
-**Module**: `data_sources/modules/above_fold_analyzer.py`
+**Module**: `seo/data_sources/modules/above_fold_analyzer.py`
 - Headline quality assessment
 - Value proposition clarity
 - CTA visibility check
@@ -39,21 +39,21 @@ Use this command to audit existing landing pages for conversion optimization opp
 - 5-second test evaluation
 
 ### 3. CTA Analyzer
-**Module**: `data_sources/modules/cta_analyzer.py`
+**Module**: `seo/data_sources/modules/cta_analyzer.py`
 - CTA count and distribution
 - Individual CTA quality scoring
 - Goal alignment check
 - Placement recommendations
 
 ### 4. Trust Signal Analyzer
-**Module**: `data_sources/modules/trust_signal_analyzer.py`
+**Module**: `seo/data_sources/modules/trust_signal_analyzer.py`
 - Testimonial analysis (count, quality, specificity)
 - Social proof detection
 - Risk reversal presence
 - Authority signals
 
 ### 5. CRO Checker
-**Module**: `data_sources/modules/cro_checker.py`
+**Module**: `seo/data_sources/modules/cro_checker.py`
 - Checklist-based audit (30+ checks)
 - Pass/fail for each CRO best practice
 - Critical failures identification
@@ -244,9 +244,9 @@ Based on this audit, consider testing:
 ## File Management
 
 Save audit reports to:
-- **Directory**: `audits/`
+- **Directory**: `seo/audits/`
 - **Filename**: `landing-audit-[slug]-[YYYY-MM-DD].md`
-- **Example**: `audits/landing-audit-private-producting-solutions-2025-12-11.md`
+- **Example**: `seo/audits/landing-audit-private-producting-solutions-2025-12-11.md`
 
 ## Audit Checklist Reference
 
@@ -299,7 +299,7 @@ Then compare the audit reports side-by-side.
 3. Or generate new headlines: Agent `headline-generator`
 
 **Before Publishing:**
-1. Run audit on draft: `/landing-audit landing-pages/[file].md`
+1. Run audit on draft: `/landing-audit seo/landing-pages/[file].md`
 2. Fix critical issues
 3. Re-audit until score ≥ 75
-4. Publish: `/landing-publish landing-pages/[file].md`
+4. Publish: `/landing-publish seo/landing-pages/[file].md`

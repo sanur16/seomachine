@@ -6,6 +6,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 SEO Machine is an open-source Claude Code workspace for creating SEO-optimized blog content. It combines custom commands, specialized agents, and Python-based analytics to research, write, optimize, and publish articles for any business.
 
+## Usage Convention
+
+SEO Machine is designed to be used from other project directories via symlinks. The convention is:
+
+```
+your-project/
+  .claude/
+    skills → /path/to/seomachine/.claude/skills
+    commands → /path/to/seomachine/.claude/commands
+    agents → /path/to/seomachine/.claude/agents
+  seo/
+    context/          # Project-specific brand voice, style guide, etc.
+    data_sources → /path/to/seomachine/data_sources
+    drafts/           # In-progress articles
+    research/         # Research briefs and analysis
+    output/           # Finalized articles
+    published/        # Published articles
+    rewrites/         # Rewritten articles
+    review-required/  # Articles needing human review
+    landing-pages/    # Landing page content
+    archive/          # Supporting files for completed articles
+    audits/           # SEO audit reports
+    data/             # Data files (e.g., article-queue.json)
+    topics/           # Topic ideas
+```
+
+All commands reference paths under `seo/` (e.g., `seo/drafts/`, `seo/context/`, `seo/data_sources/`).
+
 ## Setup
 
 ```bash
@@ -18,9 +46,10 @@ API credentials are configured in `data_sources/config/.env` (GA4, GSC, DataForS
 
 All commands are defined in `.claude/commands/` and invoked as slash commands:
 
-- `/research [topic]` - Keyword/competitor research, generates brief in `research/`
-- `/write [topic]` - Create full article in `drafts/`, auto-triggers optimization agents
-- `/rewrite [topic]` - Update existing content, saves to `rewrites/`
+- `/research [topic]` - Keyword/competitor research, generates brief in `seo/research/`
+- `/write [topic]` - Create full article in `seo/drafts/`, auto-triggers optimization agents
+- `/create [topic]` - End-to-end article creation (write + optimize + finalize to `seo/output/`)
+- `/rewrite [topic]` - Update existing content, saves to `seo/rewrites/`
 - `/optimize [file]` - Final SEO polish pass
 - `/analyze-existing [URL or file]` - Content health audit
 - `/performance-review` - Analytics-driven content priorities
@@ -81,13 +110,15 @@ python3 test_dataforseo.py
 
 ## Content Pipeline
 
-`topics/` (ideas) → `research/` (briefs) → `drafts/` (articles) → `review-required/` (pending review) → `published/` (final)
+`seo/topics/` (ideas) → `seo/research/` (briefs) → `seo/drafts/` (articles) → `seo/output/` (finalized) → `seo/published/` (live on WordPress)
 
-Rewrites go to `rewrites/`. Landing pages go to `landing-pages/`. Audits go to `audits/`.
+Articles needing human review go to `seo/review-required/`. Rewrites go to `seo/rewrites/`. Landing pages go to `seo/landing-pages/`. Audits go to `seo/audits/`. When an article moves to `seo/output/`, its supporting files are archived to `seo/archive/[slug]/`.
+
+Draft and output articles should use YAML frontmatter with snake_case keys such as `title`, `meta_title`, `meta_description`, `primary_keyword`, `secondary_keywords`, and `url_slug`.
 
 ## Context Files
 
-`context/` contains brand guidelines that inform all content generation:
+`seo/context/` contains project-specific brand guidelines that inform all content generation:
 - `brand-voice.md` - Tone, messaging pillars
 - `style-guide.md` - Grammar, formatting standards
 - `seo-guidelines.md` - Keyword and structure rules
@@ -95,6 +126,7 @@ Rewrites go to `rewrites/`. Landing pages go to `landing-pages/`. Audits go to `
 - `features.md` - Product features
 - `competitor-analysis.md` - Competitive intelligence
 - `cro-best-practices.md` - Conversion optimization guidelines
+- `product-marketing-context.md` - Foundational positioning (created via product-marketing-context skill)
 
 ## WordPress Integration
 

@@ -16,11 +16,11 @@ Use this command to create comprehensive, SEO-optimized long-form blog content.
 
 ### Pre-Writing Review
 - **Research Brief**: Review research brief from `/research` command if available
-- **Brand Voice**: Check @context/brand-voice.md for tone and messaging
-- **Writing Examples**: Study @context/writing-examples.md for style consistency
-- **Style Guide**: Follow formatting rules from @context/style-guide.md
-- **SEO Guidelines**: Apply requirements from @context/seo-guidelines.md
-- **Target Keywords**: Integrate keywords from @context/target-keywords.md naturally
+- **Brand Voice**: Check seo/context/brand-voice.md for tone and messaging
+- **Writing Examples**: Study seo/context/writing-examples.md for style consistency
+- **Style Guide**: Follow formatting rules from seo/context/style-guide.md
+- **SEO Guidelines**: Apply requirements from seo/context/seo-guidelines.md
+- **Target Keywords**: Integrate keywords from seo/context/target-keywords.md naturally
 
 ### Content Structure
 
@@ -114,7 +114,7 @@ Don't just put one CTA at the end. Embedded CTAs get 121% more conversions than 
 - URL slug
 
 #### Internal Linking (3-5+ links)
-- Reference @context/internal-links-map.md for key pages
+- Reference seo/context/internal-links-map.md for key pages
 - Link to relevant pillar content from your site
 - Link to related blog articles
 - Link to product/service pages where natural
@@ -135,14 +135,14 @@ Don't just put one CTA at the end. Embedded CTAs get 121% more conversions than 
 - Break up text with subheadings every 300-400 words
 
 ### Target Audience Focus
-- **Audience Perspective**: Write for your target audience (defined in @context/brand-voice.md)
+- **Audience Perspective**: Write for your target audience (defined in seo/context/brand-voice.md)
 - **Practical Application**: Show how information applies to their specific challenges
-- **Product Integration**: Naturally mention how your features solve problems (reference @context/features.md)
+- **Product Integration**: Naturally mention how your features solve problems (reference seo/context/features.md)
 - **Industry Context**: Reference relevant trends and best practices
 - **Technical Accuracy**: Ensure terminology and processes are correct for your industry
 
 ### Brand Voice Consistency
-- Maintain your brand tone (reference @context/brand-voice.md for specifics)
+- Maintain your brand tone (reference seo/context/brand-voice.md for specifics)
 - Follow your established voice pillars
 - Use messaging framework from your context files
 - Apply terminology preferences consistently
@@ -197,11 +197,11 @@ Word Count: [actual word count]
 
 ## File Management
 After completing the article, automatically save to:
-- **File Location**: `drafts/[topic-slug]-[YYYY-MM-DD].md`
+- **File Location**: `seo/drafts/[topic-slug]-[YYYY-MM-DD].md`
 - **File Format**: Markdown with frontmatter and formatted content
 - **Naming Convention**: Use lowercase, hyphenated topic slug and current date
 
-Example: `drafts/content-marketing-strategies-2025-10-15.md`
+Example: `seo/drafts/content-marketing-strategies-2025-10-15.md`
 
 ## Automatic Content Scrubbing
 
@@ -230,8 +230,8 @@ The scrubber will display statistics:
 
 ### Example Workflow
 ```
-1. Write article → Save to drafts/article-name-2025-10-31.md
-2. IMMEDIATELY run: /scrub drafts/article-name-2025-10-31.md
+1. Write article → Save to seo/drafts/article-name-2025-10-31.md
+2. IMMEDIATELY run: /scrub seo/drafts/article-name-2025-10-31.md
 3. Verify scrubbing statistics
 4. THEN proceed with optimization agents below
 ```
@@ -245,7 +245,7 @@ After saving the main article, immediately execute optimization agents:
 - **Agent**: `content-analyzer`
 - **Input**: Full article, meta elements, keywords, SERP data (if available)
 - **Output**: Comprehensive analysis covering search intent, keyword density, content length comparison, readability score, and SEO quality rating
-- **File**: `drafts/content-analysis-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `seo/drafts/content-analysis-[topic-slug]-[YYYY-MM-DD].md`
 
 This new agent uses 5 specialized analysis modules:
 - Search intent analysis
@@ -258,25 +258,25 @@ This new agent uses 5 specialized analysis modules:
 - **Agent**: `seo-optimizer`
 - **Input**: Full article content
 - **Output**: SEO optimization report and suggestions
-- **File**: `drafts/seo-report-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `seo/drafts/seo-report-[topic-slug]-[YYYY-MM-DD].md`
 
 ### 3. Meta Creator Agent
 - **Agent**: `meta-creator`
 - **Input**: Article content and primary keyword
 - **Output**: Multiple meta title/description options
-- **File**: `drafts/meta-options-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `seo/drafts/meta-options-[topic-slug]-[YYYY-MM-DD].md`
 
 ### 4. Internal Linker Agent
 - **Agent**: `internal-linker`
 - **Input**: Article content
 - **Output**: Specific internal linking recommendations
-- **File**: `drafts/link-suggestions-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `seo/drafts/link-suggestions-[topic-slug]-[YYYY-MM-DD].md`
 
 ### 5. Keyword Mapper Agent
 - **Agent**: `keyword-mapper`
 - **Input**: Article and target keywords
 - **Output**: Keyword placement analysis and improvements
-- **File**: `drafts/keyword-analysis-[topic-slug]-[YYYY-MM-DD].md`
+- **File**: `seo/drafts/keyword-analysis-[topic-slug]-[YYYY-MM-DD].md`
 
 ## Automatic Quality Loop
 
@@ -285,7 +285,7 @@ After saving the initial draft, automatically run the content quality scorer:
 ### Step 1: Score Content
 Run the content scorer to evaluate the draft:
 ```bash
-python data_sources/modules/content_scorer.py drafts/[article-file].md
+python seo/data_sources/modules/content_scorer.py seo/drafts/[article-file].md
 ```
 
 ### Step 2: Evaluate Score
@@ -307,13 +307,13 @@ If composite score < 70:
 4. Repeat once more if still below threshold
 
 ### Step 4: Route Based on Final Score
-- **Score ≥ 70**: Save to `drafts/` and proceed to optimization agents
-- **Score < 70 after 2 iterations**: Save to `review-required/` with a `_REVIEW_NOTES.md` file containing the scoring details and remaining issues
+- **Score ≥ 70**: Save to `seo/drafts/` and proceed to optimization agents
+- **Score < 70 after 2 iterations**: Save to `seo/review-required/` with a `_REVIEW_NOTES.md` file containing the scoring details and remaining issues
 
 ### Review-Required Folder
-Articles that fail quality threshold after 2 revision attempts go to `review-required/`:
+Articles that fail quality threshold after 2 revision attempts go to `seo/review-required/`:
 ```
-review-required/
+seo/review-required/
 ├── article-name-2025-12-10.md
 └── article-name-2025-12-10_REVIEW_NOTES.md
 ```

@@ -18,8 +18,8 @@ Use this command to update and improve existing blog posts based on analysis fin
 - **Original Content**: Read the existing article thoroughly
 - **Analysis Report**: Review findings from `/analyze-existing` if available
 - **Research Brief**: Check if new research brief exists for updated angles
-- **Brand Voice**: Verify alignment with current @context/brand-voice.md
-- **SEO Guidelines**: Apply latest requirements from @context/seo-guidelines.md
+- **Brand Voice**: Verify alignment with current seo/context/brand-voice.md
+- **SEO Guidelines**: Apply latest requirements from seo/context/seo-guidelines.md
 - **Competitive Context**: Understand what's changed in SERP since original publication
 
 ### Rewrite Strategy
@@ -125,8 +125,8 @@ Follow same structure as `/write` command:
 - Check that product references are up-to-date
 
 #### Brand Alignment
-- Maintain brand voice from @context/brand-voice.md
-- Follow formatting from @context/style-guide.md
+- Maintain brand voice from seo/context/brand-voice.md
+- Follow formatting from seo/context/style-guide.md
 - Ensure messaging aligns with current positioning
 - Keep focus on target audience needs
 
@@ -184,14 +184,14 @@ For major changes, note key differences:
 
 ## File Management
 After completing the rewrite, save to:
-- **File Location**: `rewrites/[topic-slug]-rewrite-[YYYY-MM-DD].md`
+- **File Location**: `seo/rewrites/[topic-slug]-rewrite-[YYYY-MM-DD].md`
 - **File Format**: Markdown with change summary frontmatter
 - **Naming Convention**: Use original slug + "rewrite" + current date
 
-Example: `rewrites/content-marketing-guide-rewrite-2025-10-15.md`
+Example: `seo/rewrites/content-marketing-guide-rewrite-2025-10-15.md`
 
 Also save the change summary separately:
-- **File Location**: `rewrites/changes-[topic-slug]-[YYYY-MM-DD].md`
+- **File Location**: `seo/rewrites/changes-[topic-slug]-[YYYY-MM-DD].md`
 
 ## Automatic Content Scrubbing
 
@@ -220,8 +220,8 @@ The scrubber will display statistics:
 
 ### Example Workflow
 ```
-1. Rewrite article → Save to rewrites/article-name-rewrite-2025-10-31.md
-2. IMMEDIATELY run: /scrub rewrites/article-name-rewrite-2025-10-31.md
+1. Rewrite article → Save to seo/rewrites/article-name-rewrite-2025-10-31.md
+2. IMMEDIATELY run: /scrub seo/rewrites/article-name-rewrite-2025-10-31.md
 3. Verify scrubbing statistics
 4. THEN proceed with optimization agents below
 ```

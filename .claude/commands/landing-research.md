@@ -277,16 +277,16 @@ Based on this topic, link to:
 
 Ready to create the landing page:
 ```
-/landing-write research/landing-brief-[slug].md --type [seo|ppc] --goal [trial|demo|lead]
+/landing-write seo/research/landing-brief-[slug].md --type [seo|ppc] --goal [trial|demo|lead]
 ```
 ```
 
 ## File Management
 
 Save research briefs to:
-- **Directory**: `research/`
+- **Directory**: `seo/research/`
 - **Filename**: `landing-brief-[topic-slug]-[YYYY-MM-DD].md`
-- **Example**: `research/landing-brief-product-hosting-beginners-2025-12-11.md`
+- **Example**: `seo/research/landing-brief-product-hosting-beginners-2025-12-11.md`
 
 ## Tools Used
 
@@ -322,7 +322,7 @@ Focus on:
 
 **After Research:**
 ```
-/landing-write research/landing-brief-[slug].md --type [type] --goal [goal]
+/landing-write seo/research/landing-brief-[slug].md --type [type] --goal [goal]
 ```
 
 **For Competitor Deep Dive:**

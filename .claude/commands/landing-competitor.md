@@ -264,9 +264,9 @@ Stronger alternatives for [YOUR COMPANY]:
 ## File Management
 
 Save competitor analyses to:
-- **Directory**: `research/`
+- **Directory**: `seo/research/`
 - **Filename**: `competitor-landing-[domain]-[YYYY-MM-DD].md`
-- **Example**: `research/competitor-landing-example-com-2025-12-11.md`
+- **Example**: `seo/research/competitor-landing-example-com-2025-12-11.md`
 
 ## Analysis Guidelines
 

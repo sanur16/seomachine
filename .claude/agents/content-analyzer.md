@@ -7,7 +7,7 @@ Analyze completed articles using multiple specialized modules to provide actiona
 
 ## Analysis Modules Available
 
-You have access to these Python analysis modules in `data_sources/modules/`:
+You have access to these Python analysis modules in `seo/data_sources/modules/`:
 
 1. **search_intent_analyzer.py** - Determines search intent (informational, navigational, transactional, commercial)
 2. **keyword_analyzer.py** - Analyzes keyword density, distribution, clustering, and stuffing risk

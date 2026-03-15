@@ -67,14 +67,14 @@ Creates comprehensive report with:
 ## Prerequisites
 
 ### 1. Configure Data Sources
-Before first use, set up API credentials in `data_sources/config/.env`:
+Before first use, set up API credentials in `seo/data_sources/config/.env`:
 
 ```bash
 # Copy example config
-cp data_sources/config/.env.example data_sources/config/.env
+cp seo/data_sources/config/.env.example seo/data_sources/config/.env
 
 # Edit with your credentials
-nano data_sources/config/.env
+nano seo/data_sources/config/.env
 ```
 
 Required credentials:
@@ -82,18 +82,18 @@ Required credentials:
 - Google Search Console site URL and credentials
 - DataForSEO API login and password
 
-See `data_sources/README.md` for detailed setup instructions.
+See `seo/data_sources/README.md` for detailed setup instructions.
 
 ### 2. Install Python Dependencies
 ```bash
-pip install -r data_sources/requirements.txt
+pip install -r seo/data_sources/requirements.txt
 ```
 
 ### 3. Test Data Connections
 ```bash
-python data_sources/modules/google_analytics.py
-python data_sources/modules/google_search_console.py
-python data_sources/modules/dataforseo.py
+python seo/data_sources/modules/google_analytics.py
+python seo/data_sources/modules/google_search_console.py
+python seo/data_sources/modules/dataforseo.py
 ```
 
 ## Output
@@ -147,11 +147,11 @@ Goals and measurement criteria for next review period
 
 ## File Management
 After generating the report, automatically saves to:
-- **File Location**: `research/performance-review-[YYYY-MM-DD].md`
+- **File Location**: `seo/research/performance-review-[YYYY-MM-DD].md`
 - **File Format**: Markdown with tables, metrics, and action items
 - **Naming Convention**: `performance-review-` + ISO date
 
-Example: `research/performance-review-2025-10-15.md`
+Example: `seo/research/performance-review-2025-10-15.md`
 
 ## Integration with Other Commands
 
@@ -162,7 +162,7 @@ The Performance Agent output directly informs other commands:
 1. **Quick Win Identified**: "podcast monetization" at position 13
    ```
    /analyze-existing /blog/podcast-monetization-guide
-   /optimize drafts/podcast-monetization-guide.md
+   /optimize seo/drafts/podcast-monetization-guide.md
    ```
 
 2. **Declining Content**: Article lost 35% traffic
@@ -326,12 +326,12 @@ A successful performance review should:
 # Month start: Run performance review
 /performance-review 30
 
-# Review report: research/performance-review-2025-10-15.md
+# Review report: seo/research/performance-review-2025-10-15.md
 # Identify top 5 priorities
 
 # Week 1: Quick wins
 /analyze-existing /blog/top-quick-win-article
-/optimize drafts/top-quick-win-article.md
+/optimize seo/drafts/top-quick-win-article.md
 
 # Week 2: Declining content
 /analyze-existing /blog/declining-article

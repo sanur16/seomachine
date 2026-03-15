@@ -7,7 +7,7 @@ Use this command to create high-converting landing pages optimized for either or
 
 **Examples:**
 - `/landing-write "product hosting for beginners" --type seo --goal trial`
-- `/landing-write "research/landing-brief-private-producting.md" --type ppc --goal demo`
+- `/landing-write "seo/research/landing-brief-private-producting.md" --type ppc --goal demo`
 - `/landing-write "product monetization guide" --type seo --goal lead`
 
 **Defaults:**
@@ -25,9 +25,9 @@ Use this command to create high-converting landing pages optimized for either or
 ## Pre-Writing Review
 
 **Required Context:**
-- **Landing Page Templates**: @context/landing-page-templates.md for structure
-- **CRO Best Practices**: @context/cro-best-practices.md for conversion guidelines
-- **Brand Voice**: @context/brand-voice.md for tone and messaging
+- **Landing Page Templates**: seo/context/landing-page-templates.md for structure
+- **CRO Best Practices**: seo/context/cro-best-practices.md for conversion guidelines
+- **Brand Voice**: seo/context/brand-voice.md for tone and messaging
 
 **If Research Brief Available:**
 - Review competitor analysis
@@ -300,9 +300,9 @@ Use this command to create high-converting landing pages optimized for either or
 ## File Output
 
 Save completed landing page to:
-- **Directory**: `landing-pages/`
+- **Directory**: `seo/landing-pages/`
 - **Filename**: `[topic-slug]-[YYYY-MM-DD].md`
-- **Example**: `landing-pages/product-hosting-beginners-2025-12-11.md`
+- **Example**: `seo/landing-pages/product-hosting-beginners-2025-12-11.md`
 
 ---
 
@@ -310,7 +310,7 @@ Save completed landing page to:
 
 After saving, immediately run the content scrubber:
 ```
-/scrub landing-pages/[filename].md
+/scrub seo/landing-pages/[filename].md
 ```
 
 This removes AI watermarks and characteristic patterns.
@@ -322,7 +322,7 @@ This removes AI watermarks and characteristic patterns.
 After scrubbing, score the landing page using:
 
 ```bash
-python data_sources/modules/landing_page_scorer.py landing-pages/[filename].md --type [seo|ppc] --goal [trial|demo|lead]
+python seo/data_sources/modules/landing_page_scorer.py seo/landing-pages/[filename].md --type [seo|ppc] --goal [trial|demo|lead]
 ```
 
 Or run via the landing-page-optimizer agent.
@@ -335,7 +335,7 @@ Or run via the landing-page-optimizer agent.
 1. Review critical issues and warnings
 2. Apply top 3 fixes
 3. Re-score
-4. If still below threshold, save to `review-required/landing-pages/` with notes
+4. If still below threshold, save to `seo/review-required/seo/landing-pages/` with notes
 
 ---
 
@@ -401,7 +401,7 @@ After saving and scrubbing, run these agents:
 | **Structure** | Educational flow | Conversion flow |
 | **SEO Focus** | High (rankings) | Varies (SEO vs PPC) |
 | **Internal Links** | 3-5 | 0-3 |
-| **Output** | drafts/ | landing-pages/ |
+| **Output** | seo/drafts/ | seo/landing-pages/ |
 | **Scoring** | content_scorer | landing_page_scorer |
 
 ---
@@ -413,14 +413,14 @@ After saving and scrubbing, run these agents:
 /landing-research "product hosting for wordpress" --type seo
 
 # 2. Create the landing page
-/landing-write "research/landing-brief-product-hosting-wordpress.md" --type seo --goal trial
+/landing-write "seo/research/landing-brief-product-hosting-wordpress.md" --type seo --goal trial
 
 # 3. Review score and recommendations
 # (automatic scoring runs after save)
 
 # 4. Make revisions if needed
-# (edit the file in landing-pages/)
+# (edit the file in seo/landing-pages/)
 
 # 5. Publish when ready
-/landing-publish landing-pages/product-hosting-wordpress-2025-12-11.md
+/landing-publish seo/landing-pages/product-hosting-wordpress-2025-12-11.md
 ```

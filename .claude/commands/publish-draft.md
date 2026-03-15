@@ -9,17 +9,17 @@ Publishes a draft article from this project to WordPress as a Draft, with all SE
 
 **Create a blog post (default):**
 ```
-/publish-draft drafts/content-marketing-guide-2025-12-10.md
+/publish-draft seo/drafts/content-marketing-guide-2025-12-10.md
 ```
 
 **Create a page:**
 ```
-/publish-draft drafts/pricing-comparison.md --type page
+/publish-draft seo/drafts/pricing-comparison.md --type page
 ```
 
 **Create a custom post type:**
 ```
-/publish-draft drafts/product-comparison.md --type compare
+/publish-draft seo/drafts/product-comparison.md --type compare
 ```
 
 ### Post Types
@@ -82,7 +82,7 @@ When you run this command:
 Run the WordPress publisher:
 ```bash
 cd /path/to/seomachine
-python data_sources/modules/wordpress_publisher.py "$FILE_PATH" --type "$POST_TYPE"
+python seo/data_sources/modules/wordpress_publisher.py "$FILE_PATH" --type "$POST_TYPE"
 ```
 
 Where `$POST_TYPE` is `post`, `page`, or a custom post type.

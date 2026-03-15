@@ -10,9 +10,9 @@ Use this command to publish landing pages to WordPress as pages (not blog posts)
 - `--template [slug]`: Use specific WordPress page template
 
 **Examples:**
-- `/landing-publish landing-pages/product-hosting-beginners-2025-12-11.md`
-- `/landing-publish landing-pages/free-trial-ppc-2025-12-11.md --noindex`
-- `/landing-publish landing-pages/pricing-comparison-2025-12-11.md --template landing-page`
+- `/landing-publish seo/landing-pages/product-hosting-beginners-2025-12-11.md`
+- `/landing-publish seo/landing-pages/free-trial-ppc-2025-12-11.md --noindex`
+- `/landing-publish seo/landing-pages/pricing-comparison-2025-12-11.md --template landing-page`
 
 ## What This Command Does
 
@@ -155,7 +155,7 @@ If score too low:
   1. [Issue 1]
   2. [Issue 2]
 
-Run `/landing-audit landing-pages/[file].md` for full analysis.
+Run `/landing-audit seo/landing-pages/[file].md` for full analysis.
 ```
 
 ## Differences from /publish-draft
@@ -167,7 +167,7 @@ Run `/landing-audit landing-pages/[file].md` for full analysis.
 | Score Required | Content score ≥70 | Landing page score ≥75 |
 | noindex Option | No | Yes (for PPC) |
 | Template Option | No | Yes |
-| Output Directory | drafts/ | landing-pages/ |
+| Output Directory | seo/drafts/ | seo/landing-pages/ |
 
 ## Pre-Publish Checklist
 
@@ -238,14 +238,14 @@ If issues are found after publishing:
 /landing-write "product hosting" --type seo --goal trial
 
 # 3. Audit the draft
-/landing-audit landing-pages/product-hosting-2025-12-11.md
+/landing-audit seo/landing-pages/product-hosting-2025-12-11.md
 
 # 4. Fix any issues (if needed)
 # Edit the file manually
 
 # 5. Re-audit until score ≥75
-/landing-audit landing-pages/product-hosting-2025-12-11.md
+/landing-audit seo/landing-pages/product-hosting-2025-12-11.md
 
 # 6. Publish
-/landing-publish landing-pages/product-hosting-2025-12-11.md
+/landing-publish seo/landing-pages/product-hosting-2025-12-11.md
 ```

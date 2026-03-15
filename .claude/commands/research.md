@@ -33,10 +33,10 @@ Use this command to conduct comprehensive SEO keyword research and competitive a
 
 ### Context Integration
 - **your company Advantage**: How can your company product features naturally enhance this content?
-- **Brand Alignment**: Check @context/brand-voice.md for messaging fit
-- **Existing Content**: Review @context/internal-links-map.md for related your company articles
-- **Target Keywords**: Cross-reference with @context/target-keywords.md priority list
-- **SEO Guidelines**: Ensure research aligns with @context/seo-guidelines.md requirements
+- **Brand Alignment**: Check seo/context/brand-voice.md for messaging fit
+- **Existing Content**: Review seo/context/internal-links-map.md for related your company articles
+- **Target Keywords**: Cross-reference with seo/context/target-keywords.md priority list
+- **SEO Guidelines**: Ensure research aligns with seo/context/seo-guidelines.md requirements
 
 ### Podcast Industry Focus
 - **Podcast Creator Angle**: How does this topic specifically impact target audiences?
@@ -51,7 +51,7 @@ Use this command to conduct comprehensive SEO keyword research and competitive a
 - **Supporting Evidence**: Identify statistics, studies, or data to include
 - **Expert Sources**: Find industry experts or quotes to reference
 - **Visual Opportunities**: Suggest images, screenshots, or graphics needed
-- **Internal Links**: Map 3-5 key your company pages to link to (from @context/internal-links-map.md)
+- **Internal Links**: Map 3-5 key your company pages to link to (from seo/context/internal-links-map.md)
 - **External Authority**: Identify 2-3 authoritative external sources to link
 
 ### Hook Development
@@ -115,11 +115,11 @@ Conclusion
 
 ## File Management
 After completing the research, automatically save the brief to:
-- **File Location**: `research/brief-[topic-slug]-[YYYY-MM-DD].md`
+- **File Location**: `seo/research/brief-[topic-slug]-[YYYY-MM-DD].md`
 - **File Format**: Markdown with clear sections and structured data
 - **Naming Convention**: Use lowercase, hyphenated topic slug and current date
 
-Example: `research/brief-podcast-editing-software-2025-10-15.md`
+Example: `seo/research/brief-podcast-editing-software-2025-10-15.md`
 
 ## Next Steps
 The research brief serves as the foundation for:

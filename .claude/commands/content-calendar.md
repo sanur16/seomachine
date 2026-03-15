@@ -36,30 +36,30 @@ Extract from user input:
 
 ### 2. Run Research Scripts
 
-Check if today's reports already exist before running each script. Skip any script whose report for today is already in `research/`.
+Check if today's reports already exist before running each script. Skip any script whose report for today is already in `seo/research/`.
 
 ```bash
 python3 research_quick_wins.py
 ```
-Generates `research/quick-wins-YYYY-MM-DD.md`
+Generates `seo/research/quick-wins-YYYY-MM-DD.md`
 
 ```bash
 python3 research_topic_clusters.py
 ```
-Generates `research/topic-clusters-YYYY-MM-DD.md`
+Generates `seo/research/topic-clusters-YYYY-MM-DD.md`
 
 ```bash
 python3 research_performance_matrix.py
 ```
-Generates `research/performance-matrix-YYYY-MM-DD.md`
+Generates `seo/research/performance-matrix-YYYY-MM-DD.md`
 
 ```bash
 python3 research_trending.py
 ```
-Generates `research/trending-topics-YYYY-MM-DD.md`
+Generates `seo/research/trending-topics-YYYY-MM-DD.md`
 
 Also check for recent competitor gap reports:
-- Read `research/competitor-gaps-*.md` if any exist (use most recent)
+- Read `seo/research/competitor-gaps-*.md` if any exist (use most recent)
 
 **Important**: If a report for today already exists, skip that script to save API credits. Read the existing report instead.
 
@@ -155,7 +155,7 @@ Assign items to specific dates within the target month, using these weekly strat
 
 ### 6. Write Output
 
-Save the calendar to `research/content-calendar-YYYY-MM.md` where YYYY-MM is the target month.
+Save the calendar to `seo/research/content-calendar-YYYY-MM.md` where YYYY-MM is the target month.
 
 ## Output Format
 
@@ -276,14 +276,14 @@ Items that didn't fit this month but should be scheduled next:
 ## File Management
 
 The command reads from:
-- `research/quick-wins-YYYY-MM-DD.md`
-- `research/topic-clusters-YYYY-MM-DD.md`
-- `research/performance-matrix-YYYY-MM-DD.md`
-- `research/trending-topics-YYYY-MM-DD.md`
-- `research/competitor-gaps-*.md` (most recent, if available)
+- `seo/research/quick-wins-YYYY-MM-DD.md`
+- `seo/research/topic-clusters-YYYY-MM-DD.md`
+- `seo/research/performance-matrix-YYYY-MM-DD.md`
+- `seo/research/trending-topics-YYYY-MM-DD.md`
+- `seo/research/competitor-gaps-*.md` (most recent, if available)
 
 The command creates:
-- `research/content-calendar-YYYY-MM.md` (month-based naming since it covers a full month)
+- `seo/research/content-calendar-YYYY-MM.md` (month-based naming since it covers a full month)
 
 ## Integration
 

@@ -54,7 +54,7 @@ Use this command to perform a final SEO optimization pass on completed articles 
 - **Anchor Text**: Check for keyword-rich, descriptive anchor text
 - **Placement**: Natural integration within body content
 - **Variety**: Links to different page types (pillar, blog, product, resources)
-- **Reference**: Cross-check @context/internal-links-map.md for opportunities
+- **Reference**: Cross-check seo/context/internal-links-map.md for opportunities
 - **Broken Links**: Verify all internal links work
 
 **Recommendations**:
@@ -136,8 +136,8 @@ Use this command to perform a final SEO optimization pass on completed articles 
 ### Brand & Voice
 
 #### your company Alignment
-- **Brand Voice**: Verify alignment with @context/brand-voice.md
-- **Style Guide**: Check adherence to @context/style-guide.md
+- **Brand Voice**: Verify alignment with seo/context/brand-voice.md
+- **Style Guide**: Check adherence to seo/context/style-guide.md
 - **Messaging**: Ensure messaging reflects your company positioning
 - **Product Mentions**: Natural integration of your company features
 - **CTA**: Appropriate call-to-action for article intent
@@ -236,11 +236,11 @@ Visual representation of where primary keyword appears:
 
 ## File Management
 After optimization analysis, save report to:
-- **File Location**: `drafts/optimization-report-[topic-slug]-[YYYY-MM-DD].md`
+- **File Location**: `seo/drafts/optimization-report-[topic-slug]-[YYYY-MM-DD].md`
 - **File Format**: Markdown with scores, checklists, and recommendations
 - **Naming Convention**: Use article slug + "optimization-report" + date
 
-Example: `drafts/optimization-report-podcast-analytics-2025-10-15.md`
+Example: `seo/drafts/optimization-report-podcast-analytics-2025-10-15.md`
 
 ## Integration with Agents
 The `/optimize` command triggers final review from all agents:

@@ -30,7 +30,7 @@ This will:
 3. Identify gaps (they rank, you don't)
 4. Enrich with search volume, difficulty, SERP features
 5. Score and prioritize opportunities
-6. Generate report: `research/competitor-gaps-YYYY-MM-DD.md`
+6. Generate report: `seo/research/competitor-gaps-YYYY-MM-DD.md`
 
 ## Output
 

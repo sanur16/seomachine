@@ -35,7 +35,7 @@ This will:
 3. Calculate authority score for each cluster
 4. Identify coverage gaps using DataForSEO
 5. Prioritize weak clusters with high demand
-6. Generate report: `research/topic-clusters-YYYY-MM-DD.md`
+6. Generate report: `seo/research/topic-clusters-YYYY-MM-DD.md`
 
 ## Output
 
